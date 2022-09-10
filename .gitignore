@@ -1,0 +1,15 @@
+*.pyc
+*.pyo
+*.swp
+*.swo
+*.orig
+
+/web/settings_local.py
+pip-log.txt
+/.env
+/var/
+/dump/
+/src/
+/ioweb
+/.hg/
+/.pytest_cache/
