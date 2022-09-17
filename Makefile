@@ -1,4 +1,4 @@
-.PHONY: build venv deps clean init
+.PHONY: build venv deps clean init kernel
 
 build: venv deps init
 
@@ -12,6 +12,10 @@ clean:
 	find -name '*.pyc' -delete
 	find -name '*.swp' -delete
 	find -name '__pycache__' -delete
+
+kernel:
+	. .env/bin/activate && \
+		ipython kernel install --user --name=mlzoomcamp-venv
 
 init:
 	if [ ! -e var/run ]; then mkdir -p var/run; fi
